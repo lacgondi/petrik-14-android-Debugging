@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                     SharedPreferences sharedPreferences = getSharedPreferences("Adatok", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("nev", editTextName.getText().toString());
+                    editor.commit();
                     editor.apply();
                     Intent intent = new Intent(MainActivity.this, Menu.class);
                     startActivity(intent);
